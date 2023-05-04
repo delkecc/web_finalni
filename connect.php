@@ -1,7 +1,7 @@
 <?php
     if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit']))
     {
-        $conn = mysqli_connect("localhost", "root", "baza_podataka1") or die ("Connection failed: " . mysqli_connect);
+        $conn = mysqli_connect("localhost", "root", "baza_podataka1") or die ("Connection failed: " . mysqli_connect());
     }
     if (isset($_POST['ime_prezime']) && isset($_POST['email']) && isset($_POST['poruka']))
     {
@@ -15,6 +15,4 @@
         if($query) echo 'Unos uspjesan!';
         else echo 'Greska!';
     }
-    
-    
 ?>
